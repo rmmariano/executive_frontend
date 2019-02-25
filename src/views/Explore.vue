@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
-    <p>Home page...</p>
-    <p>[describe the project here...] </p>
+  <div class="explore">
+    <p>Map page...</p>
+    <p>[plot map here...] </p>
   </div>
 </template>
 

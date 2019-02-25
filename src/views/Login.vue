@@ -1,7 +1,6 @@
 <template>
-  <div class="home">
-    <p>Home page...</p>
-    <p>[describe the project here...] </p>
+  <div class="login">
+    <p>Login page...</p>
   </div>
 </template>
 

@@ -1,10 +1,15 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/vue/home">Home</router-link> |
-      <router-link to="/vue/about">About</router-link>
+      <router-link to="/home">Home</router-link> |
+      <router-link to="/explore">Explore</router-link> |
+      <router-link to="/login">Login</router-link> |
+      [
+      <router-link to="/vue/home">VueHome</router-link> |
+      <router-link to="/vue/about">VueAbout</router-link>
+      ]
     </div>
-    <router-view/>
+    <router-view/>  <!-- insert the related view here -->
   </div>
 </template>
 

@@ -5,6 +5,17 @@
 npm install
 ```
 
+### Build image for development
+```
+docker build --no-cache -f Dockerfile.dev -t ms3_executive_frontend_dev .
+```
+
+### Run the container for development
+```
+cd ..
+docker-compose -f docker-compose.dev.yml up
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve

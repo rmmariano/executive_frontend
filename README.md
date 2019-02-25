@@ -11,8 +11,30 @@ docker build --no-cache -f Dockerfile.dev -t ms3_executive_frontend_dev .
 ```
 
 ### Run the container for development
+1- create the docker-compose.dev.yml
+
 ```
 cd ..
+nano docker-compose.dev.yml
+```
+
+2- add the following text:
+
+```
+version: '3'
+
+services:
+  ms3_executive_front:
+    image: "ms3_executive_frontend_dev"
+    ports:
+     - "8080:8080"
+    volumes:
+     - ./executive_frontend:/app
+```
+
+3- Run the docker compose:
+
+```
 docker-compose -f docker-compose.dev.yml up
 ```
 

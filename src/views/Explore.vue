@@ -17,45 +17,36 @@ export default {
 
   data () {
     return {
-      // clipped: false,
-      // drawer: true,
-      // fixed: false,
-      // items: [{
-      //   icon: 'bubble_chart',
-      //   title: 'Inspire'
-      // }],
-      // miniVariant: false,
-      // right: true,
-      // rightDrawer: false,
-      // title: 'Vuetify.js'
     }
   },
-  // method () {
-  // },
-  mounted () {
-    this.$nextTick(function () {
-      initMap()
-    })
-  }
-}
-
-function initMap () {
-  // eslint-disable-next-line
-  var map = new Map({
-    target: 'map',
-    layers: [
-      new TileLayer({
-        source: new XYZ({
-          url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+  methods: {
+    initMap: function () {
+      // eslint-disable-next-line
+      var map = new Map({
+        target: 'map',
+        layers: [
+          new TileLayer({
+            source: new XYZ({
+              url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+            })
+          })
+        ],
+        view: new View({
+          center: [0, 0],
+          zoom: 5
         })
       })
-    ],
-    view: new View({
-      center: [0, 0],
-      zoom: 5
-    })
-  })
-};
+    }
+  },
+  mounted: function () {
+    this.initMap()
+  }
+  // mounted () {
+  //   this.$nextTick(function () {
+  //     initMap()
+  //   })
+  // }
+}
 </script>
 
 <style>

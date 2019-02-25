@@ -1,17 +1,6 @@
 <template>
   <div id="app">
 
-    <!-- old navbar -->
-    <!-- <div id="nav">
-      <router-link to="/home">Home</router-link> |
-      <router-link to="/explore">Explore</router-link> |
-      <router-link to="/login">Login</router-link> |
-      [
-      <router-link to="/vue/home">VueHome</router-link> |
-      <router-link to="/vue/about">VueAbout</router-link>
-      ]
-    </div> -->
-
     <div id="nav">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">MS3</a>
@@ -37,9 +26,6 @@
             <li class="nav-item">
               <router-link class="nav-link" to="/vue/about">VueAbout ]</router-link>
             </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link disabled" href="#">Disabled</a>
-            </li> -->
           </ul>
         </div>
       </nav>

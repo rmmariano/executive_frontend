@@ -38,7 +38,7 @@ export default {
         stopEvent: false,
         // offset:[0,0],
         autoPan: true,
-        position: fromLonLat([82, 80], 'EPSG:4326', 'EPSG:3857'),
+        position: fromLonLat([0, 0], 'EPSG:4326', 'EPSG:3857'),
         positioning: 'top-right',
         autoPanAnimation: {
           duration: 250
@@ -52,7 +52,6 @@ export default {
       // overlayGroup.getLayers().forEach(sublayer => {
       //   console.log('\n sublayer: ', sublayer, '\n')
       // })
-
     }
   },
   created: function () {

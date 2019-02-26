@@ -26,37 +26,33 @@
 </template>
 
 <script>
-import Overlay from 'ol/Overlay.js'
-import { fromLonLat } from 'ol/proj.js'
+// import Overlay from 'ol/Overlay.js'
+// import { fromLonLat } from 'ol/proj.js'
 
 export default {
-  props: ['parentMap'],
-  methods: {
-    addLayerTreeOnMap: function () {
-      var layerTree = new Overlay({
-        element: document.getElementById('layer-tree'),
-        stopEvent: false,
-        // offset:[0,0],
-        autoPan: true,
-        position: fromLonLat([0, 0], 'EPSG:4326', 'EPSG:3857'),
-        positioning: 'top-right',
-        autoPanAnimation: {
-          duration: 250
-        }
-      })
+  props: ['parentMap']
+  // methods: {
+  //   addLayerTreeOnMap: function () {
+  //     var layerTree = new Overlay({
+  //       element: document.getElementById('layer-tree'),
+  //       // stopEvent: false,
+  //       // offset:[0,0],
+  //       // autoPan: true,
+  //       // positioning: 'top-right',
+  //       // autoPanAnimation: {
+  //       //   duration: 250
+  //       // },
+  //       position: fromLonLat([0, 0], 'EPSG:4326', 'EPSG:3857')
+  //     })
 
-      this.parentMap.addOverlay(layerTree)
+  //     this.parentMap.addOverlay(layerTree)
 
-      console.log('\n\n this.parentMap: ', this.parentMap, '\n\n')
-
-      // overlayGroup.getLayers().forEach(sublayer => {
-      //   console.log('\n sublayer: ', sublayer, '\n')
-      // })
-    }
-  },
-  created: function () {
-    this.addLayerTreeOnMap()
-  }
+  //     console.log('\n\n this.parentMap: ', this.parentMap, '\n\n')
+  //   }
+  // },
+  // created: function () {
+  //   this.addLayerTreeOnMap()
+  // }
 }
 </script>
 

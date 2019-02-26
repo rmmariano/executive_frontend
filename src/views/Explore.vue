@@ -1,10 +1,11 @@
 <template>
   <div id="explore_main">
 
-    <ExploreLayerTree v-bind:parentMap="map" v-if="renderChild"/>
-
     <!-- where the map is ploted -->
     <div id="map" class="map"></div>
+
+    <!-- layer tree -->
+    <ExploreLayerTree v-bind:parentMap="map" v-if="showExploreLayerTree"/>
 
   </div>
 </template>
@@ -13,6 +14,9 @@
 import 'ol/ol.css'
 import Map from 'ol/Map'
 import View from 'ol/View'
+
+import Overlay from 'ol/Overlay.js'
+import { fromLonLat } from 'ol/proj.js'
 
 // @ is an alias to /src
 import { layerGroupBaseMap } from '@/assets/js/Explorer/Layer'
@@ -24,7 +28,7 @@ export default {
   data () {
     return {
       map: {},
-      renderChild: false
+      showExploreLayerTree: false
     }
   },
   methods: {
@@ -44,7 +48,15 @@ export default {
 
       console.log('\n\n this.map: ', this.map, '\n\n')
 
-      this.renderChild = true
+      var layerTree = new Overlay({
+        element: document.getElementById('layer-tree'),
+        position: fromLonLat([0, 0], 'EPSG:4326', 'EPSG:3857')
+      })
+
+      this.map.addOverlay(layerTree)
+
+      this.showExploreLayerTree = true
+      console.log('\n>>> Showing the layer tree \n')
     }
   },
   mounted: function () {

@@ -33,12 +33,8 @@ export default {
   props: ['parentMap'],
   methods: {
     addLayerTreeOnMap: function () {
-      console.log('\n\n this.parentMap: ', this.parentMap, '\n\n')
-
-      var divLayerTree = document.getElementById('layer-tree')
-
       var layerTree = new Overlay({
-        element: divLayerTree,
+        element: document.getElementById('layer-tree'),
         stopEvent: false,
         // offset:[0,0],
         autoPan: true,
@@ -50,6 +46,13 @@ export default {
       })
 
       this.parentMap.addOverlay(layerTree)
+
+      console.log('\n\n this.parentMap: ', this.parentMap, '\n\n')
+
+      // overlayGroup.getLayers().forEach(sublayer => {
+      //   console.log('\n sublayer: ', sublayer, '\n')
+      // })
+
     }
   },
   created: function () {
@@ -59,9 +62,9 @@ export default {
 </script>
 
 <style>
-#layer_tree {
+#layer-tree {
   width: 200px;
-  /* position: absolute; */
+  position: absolute;
   /* overflow: auto; */
 }
 </style>

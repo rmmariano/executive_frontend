@@ -1,7 +1,7 @@
 <template>
   <div id="explore_main">
 
-    <ExploreLayerTree v-bind:parentMap="map"/>
+    <ExploreLayerTree v-bind:parentMap="map" v-if="renderChild"/>
 
     <!-- where the map is ploted -->
     <div id="map" class="map"></div>
@@ -14,6 +14,7 @@ import 'ol/ol.css'
 import Map from 'ol/Map'
 import View from 'ol/View'
 import TileLayer from 'ol/layer/Tile'
+import Group from 'ol/layer/Group'
 import XYZ from 'ol/source/XYZ'
 
 // @ is an alias to /src
@@ -24,7 +25,8 @@ export default {
 
   data () {
     return {
-      map: {}
+      map: {},
+      renderChild: false
     }
   },
   methods: {
@@ -41,11 +43,16 @@ export default {
         })
       })
 
+      var layerGroupBaseMap = new Group({
+        title: 'layerGroupBaseMap',
+        layers: [layerGoogleSatellite, layerOSM]
+      })
+
       // eslint-disable-next-line
       this.map = new Map({
         target: 'map',
         layers: [
-          layerOSM, layerGoogleSatellite
+          layerGroupBaseMap
         ],
         view: new View({
           projection: 'EPSG:4326',
@@ -55,6 +62,8 @@ export default {
       })
 
       console.log('\n\n this.map: ', this.map, '\n\n')
+
+      this.renderChild = true
 
       // var googleLayerRoadNames=new ol.layer.Tile({
       //     title: "Google Road Names",

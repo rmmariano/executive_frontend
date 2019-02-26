@@ -1,5 +1,5 @@
 <template>
-  <div id="layer_tree">
+  <div id="layer-tree">
 
     <!-- layer tree -->
     <b-card-group deck>
@@ -26,6 +26,36 @@
 </template>
 
 <script>
+import Overlay from 'ol/Overlay.js'
+import { fromLonLat } from 'ol/proj.js'
+
+export default {
+  props: ['parentMap'],
+  methods: {
+    addLayerTreeOnMap: function () {
+      console.log('\n\n this.parentMap: ', this.parentMap, '\n\n')
+
+      var divLayerTree = document.getElementById('layer-tree')
+
+      var layerTree = new Overlay({
+        element: divLayerTree,
+        stopEvent: false,
+        // offset:[0,0],
+        autoPan: true,
+        position: fromLonLat([82, 80], 'EPSG:4326', 'EPSG:3857'),
+        positioning: 'top-right',
+        autoPanAnimation: {
+          duration: 250
+        }
+      })
+
+      this.parentMap.addOverlay(layerTree)
+    }
+  },
+  created: function () {
+    this.addLayerTreeOnMap()
+  }
+}
 </script>
 
 <style>

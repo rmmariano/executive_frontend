@@ -1,7 +1,7 @@
 <template>
   <div id="explore_main">
 
-    <ExploreLayerTree/>
+    <ExploreLayerTree v-bind:parentMap="map"/>
 
     <!-- where the map is ploted -->
     <div id="map" class="map"></div>
@@ -53,6 +53,8 @@ export default {
           zoom: 5
         })
       })
+
+      console.log('\n\n this.map: ', this.map, '\n\n')
 
       // var googleLayerRoadNames=new ol.layer.Tile({
       //     title: "Google Road Names",

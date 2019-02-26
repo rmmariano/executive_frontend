@@ -1,27 +1,7 @@
 <template>
   <div id="explore_main">
 
-    <!-- <div class="panel panel-default">
-      <div class="panel-heading">
-        <h1>Panel Heading</h1>
-        </div>
-      <div class="panel-body">Panel Content</div>
-    </div> -->
-
-    <!-- layer tree -->
-    <!-- <div class="panel panel-primary">
-      <div class="panel-heading">Layers:</div>
-      <div class="panel-body">
-        <div class="custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="customSwitches">
-          <label class="custom-control-label" for="customSwitches">OpenStreetMap</label>
-        </div>
-        <div class="custom-control custom-switch">
-          <input type="checkbox" class="custom-control-input" id="customSwitches1" checked="">
-          <label class="custom-control-label" for="customSwitches1">Google Satellite</label>
-        </div>
-      </div>
-    </div> -->
+    <ExploreLayerTree/>
 
     <!-- where the map is ploted -->
     <div id="map" class="map"></div>
@@ -36,11 +16,15 @@ import View from 'ol/View'
 import TileLayer from 'ol/layer/Tile'
 import XYZ from 'ol/source/XYZ'
 
+// @ is an alias to /src
+import ExploreLayerTree from '@/components/Explore/LayerTree.vue'
+
 export default {
   name: 'Explore',
 
   data () {
     return {
+      map: {}
     }
   },
   methods: {
@@ -54,12 +38,11 @@ export default {
       var layerGoogleSatellite = new TileLayer({
         source: new XYZ({
           url: 'http://mt1.google.com/vt/lyrs=s&hl=pl&&x={x}&y={y}&z={z}'
-          // visible: false
         })
       })
 
       // eslint-disable-next-line
-      var map = new Map({
+      this.map = new Map({
         target: 'map',
         layers: [
           layerOSM, layerGoogleSatellite
@@ -104,12 +87,15 @@ export default {
   },
   mounted: function () {
     this.initMap()
-  }
+  },
   // mounted () {
   //   this.$nextTick(function () {
   //     initMap()
   //   })
   // }
+  components: {
+    ExploreLayerTree
+  }
 }
 </script>
 

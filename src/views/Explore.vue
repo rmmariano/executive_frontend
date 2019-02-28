@@ -4,6 +4,10 @@
     <!-- layer tree -->
     <!-- <ExploreLayerTree v-if="showExploreLayerTree" v-bind:parentMap="map"/> -->
 
+
+
+    <!-- minha barra -->
+
     <div class="container">
         <div class="row">
 
@@ -101,6 +105,7 @@
 
     <!-- barra da carol -->
     
+    <!--
     <div id="sidebar" class="sidebar collapsed">
       <div class="sidebar-tabs">
         <ul role="tablist">
@@ -112,15 +117,17 @@
         <ul role="tablist">
           <li><a href="#notifications" role="tab"><i class="fa fa-envelope-o"></i></a></li>
           <li><a href="#login" role="tab"><i class="fa fa-user"></i></a></li>
-          <!-- {% if current_user.has_role('admin') %} -->
+          <!- - {% if current_user.has_role('admin') %} - ->
           <li><a href="#settings" role="tab"><i class="fa fa-gear"></i></a></li>
-          <!-- {% endif %} -->
+          <!- - {% endif %} - ->
         </ul>
       </div>
+      -->
 
+    <!--
       <div class="sidebar-content">
 
-        <!-- {% include 'html/search.html' %} -->
+        <!- - {% include 'html/search.html' %} - ->
         <div class="sidebar-pane" id="home" style="padding-right: 0px; padding-bottom: 0px">
           <h1 class="sidebar-header">Catalog Search<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
           <div class="container-fluid nopadding-left" style="margin-top: 10px">
@@ -274,7 +281,7 @@
           </div>
         </div>
 
-        <!-- {% include 'html/executive.html' %} -->
+        <!- - {% include 'html/executive.html' %} - ->
         <div class="sidebar-pane" id="maestro">
           <h1 class="sidebar-header">Production Manager<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
           <div class="container-fluid nopadding-left" style="margin-top: 10px">
@@ -364,7 +371,7 @@
           </div>
         </div>
 
-        <!-- {% include 'html/statistics.html' %} -->
+        <!- - {% include 'html/statistics.html' %} - ->
         <div class="sidebar-pane" id="statistics">
           <h1 class="sidebar-header">Statistics<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
           <div class="container-fluid nopadding-left" style="margin-top: 10px">
@@ -372,7 +379,7 @@
           </div>
         </div>
 
-        <!-- {% include 'html/notifications.html' %} -->
+        <!- - {% include 'html/notifications.html' %} - ->
         <div class="sidebar-pane" id="notifications">
           <h1 class="sidebar-header">Notifications<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
           <div class="row">
@@ -382,7 +389,7 @@
           </div>
         </div>
 
-        <!-- {% include 'html/download.html' %} -->
+        <!- - {% include 'html/download.html' %} - ->
         <div class="sidebar-pane" id="download">
           <h1 class="sidebar-header">Download<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
           <div class="container-fluid nopadding-left" style="margin-top: 10px">
@@ -390,16 +397,16 @@
           </div>
         </div>
 
-        <!-- login -->
+        <!- - login - ->
         <div class="sidebar-pane" id="login">
-        <!-- {% if current_user.is_authenticated %}
+        <!- - {% if current_user.is_authenticated %}
             {% include 'html/user_profile.html' %}
         {% else %}
             {% include 'security/login_user.html' %}
-        {% endif %} -->
+        {% endif %} - ->
         </div>
 
-        <!-- {% include 'html/settings.html' %} -->
+        <!- - {% include 'html/settings.html' %} - ->
         <div class="sidebar-pane" id="settings">
           <h1 class="sidebar-header">Settings<span class="sidebar-close"><i class="fa fa-caret-left"></i></span></h1>
           <div class="container-fluid nopadding-left" style="margin-top: 10px">
@@ -427,6 +434,7 @@
             </div>
         </div>
     </div>
+    -->
 
     <!-- barra da carol  / -->
 

@@ -438,188 +438,7 @@
 
     <!-- barra da carol  / -->
 
-    <!-- <div class="wrapper">
-        <!- - Sidebar Holder - ->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
-
-            <ul class="list-unstyled CTAs">
-                <li>
-                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-                </li>
-                <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
-                </li>
-            </ul>
-        </nav>
-
-        <!- - Page Content Holder - ->
-        <div id="content">
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="navbar-btn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            
-            <h2>Collapsible Sidebar Using Bootstrap 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-            <div class="line"></div>
-
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-    </div> -->
-
-    <!--  -->
-
-    <!-- <div class="alert alert-primary" role="alert">
-      Um simples alerta primary. Olha só!
-    </div> -->
-
-    <!--  -->
-
-    <!-- <div>
-      <b-button v-b-toggle.collapse1 variant="primary">Toggle Collapse</b-button>
-      <b-collapse id="collapse1" class="mt-2">
-        <b-card>
-
-          <p class="card-text">Collapse contents Here</p>
-
-          <b-button v-b-toggle.collapse1_inner size="sm">Toggle Inner Collapse</b-button>
-          <b-collapse id="collapse1_inner" class="mt-2">
-            <b-card>Hello!</b-card>
-          </b-collapse>
-
-        </b-card>
-      </b-collapse>
-    </div> -->
-
-    <!-- <div>
-      <b-card no-body>
-        <b-tabs pills card vertical>
-          <b-tab title="Tab 1" active>Tab Contents 1</b-tab>
-          <b-tab title="Tab 2">Tab Contents 2</b-tab>
-          <b-tab title="Tab 3">Tab Contents 3</b-tab>
-        </b-tabs>
-      </b-card>
-    </div> -->
-
-    <!--  -->
-
-    <!-- <div id="left-vertical-menu">
-      <b-nav vertical class="w-25">
-        <b-nav-item active>Active</b-nav-item>
-        <b-nav-item>Link</b-nav-item>
-        <b-nav-item>Another Link</b-nav-item>
-        <b-nav-item disabled>Disabled</b-nav-item>
-      </b-nav>
-    </div> -->
-
-    <!--  -->
-
-    <div id="layer-tree2">
-
-      <!-- layer tree -->
-      <b-card-group id="id1" deck>
-        <b-card title="Layers:" header-tag="header" footer-tag="footer">
-          <!-- <h6 slot="header" class="mb-0">My header slot</h6> -->
-          <b-card-text>
-
-            <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitches">
-              <label class="custom-control-label" for="customSwitches">OpenStreetMap</label>
-            </div>
-            <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitches1" checked="">
-              <label class="custom-control-label" for="customSwitches1">Google Satellite</label>
-            </div>
-
-            </b-card-text>
-          <!-- <b-button href="#" variant="primary">Go somewhere</b-button> -->
-          <!-- <em slot="footer"> my footer Slot</em> -->
-        </b-card>
-      </b-card-group>
-
-    </div>
+    <explore-layer-tree/>
 
     <!-- where the map is ploted -->
     <div id="map" class="map"></div>
@@ -639,7 +458,7 @@ import { fromLonLat } from 'ol/proj.js'
 
 // @ is an alias to /src
 import { layerGroupBaseMap } from '@/assets/js/Explorer/Layer'
-// import ExploreLayerTree from '@/components/Explore/LayerTree.vue'
+import ExploreLayerTree from '@/components/Explore/LayerTree.vue'
 
 export default {
   name: 'Explore',
@@ -680,23 +499,23 @@ export default {
   },
   mounted: function () {
     this.initMap()
-  }
+  },
   // mounted () {
   //   this.$nextTick(function () {
   //     initMap()
   //   })
   // }
-  // components: {
-  //   ExploreLayerTree
-  // }
+  components: {
+    ExploreLayerTree
+  }
 }
 
 $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {
-        $('#sidebar').toggleClass('active');
-        $(this).toggleClass('active');
-    });
-});
+        $('#sidebar').toggleClass('active')
+        $(this).toggleClass('active')
+    })
+})
 </script>
 
 <style>
@@ -728,24 +547,16 @@ $(document).ready(function () {
 
 /* these CSS are mine */
 #map {
-  height: calc(100vh - 60px); /* 100% of the viewport height - navbar height */
+  /*height: calc(100vh - 60px); / * 100% of the viewport height - navbar height */
+  height: 100%;
+  width: 100%;
 }
-#left-vertical-menu{
-  width: 100px;
-  /* position: absolute; */
-}
-#id1{
+/* #layer-menu{
   position: absolute;
-}
-#layer-tree2 {
-  width: 200px;
-  position: relative;
-  /* overflow: auto; */
-}
+  z-index: 1000;
+} */
 
-/*  */
-
-
+/* carol */
 /* 
 / *
     DEMO STYLE

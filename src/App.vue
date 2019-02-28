@@ -1,23 +1,22 @@
 <template>
   <div id="app">
 
-    <left-side-bar/>
+    <main-left-side-bar/>
 
   </div>
 </template>
 
 <script>
-import LeftSideBar from '@/components/LeftSideBar.vue'
+import MainLeftSideBar from '@/components/MainLeftSideBar.vue'
 
 export default {
   name: 'App',
-
   data () {
     return {
     }
   },
   components: {
-    LeftSideBar
+    MainLeftSideBar
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="left-side-bar">
+  <div id="left-side-bar" class="ms3-page-content">
     <!-- minha barra -->
     <div class="container">
       <div class="row">

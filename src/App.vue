@@ -24,6 +24,11 @@ export default {
 <style>
 /* global styles */
 .ms3-page-content {
-  padding: 40px 40px;
+  padding: 40px 40px 40px 40px;
+}
+@media screen and (min-width: 768px) {
+  .page-wrapper.toggled .ms3-page-content {
+    padding-left: 300px;
+  }
 }
 </style>

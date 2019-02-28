@@ -3,252 +3,253 @@
 
     <!-- source: (1) https://bootsnipp.com/snippets/Q0dAX ; (2) https://github.com/azouaoui-med/pro-sidebar-template/ -->
     <div class="page-wrapper chiller-theme toggled">
-        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" style="z-index: 2000;">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" style="z-index: 10000;">
           <i class="fas fa-bars"></i>
         </a>
-        <nav id="sidebar" class="sidebar-wrapper">
-        <div class="sidebar-content">
-            <div class="sidebar-brand">
-            <a href="#">MS3</a>
-            <div id="close-sidebar">
-                <i class="fas fa-times"></i>
-            </div>
-            </div>
-            
-            <!-- sidebar-header  -->
-            <div class="sidebar-header">
-            <div class="user-pic">
-                <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-                alt="User picture">
-            </div>
-            <div class="user-info">
-                <span class="user-name">
-                User: <strong>X</strong>
-                </span>
-                <span class="user-role">Administrator</span>
-                <span class="user-status">
-                <i class="fa fa-circle"></i>
-                <span>Online</span>
-                </span>
-            </div>
-            </div>
-            
-            <!-- sidebar-search  -->
-            <!-- <div class="sidebar-search">
-            <div>
-                <div class="input-group">
-                <input type="text" class="form-control search-menu" placeholder="Search...">
-                <div class="input-group-append">
-                    <span class="input-group-text">
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    </span>
-                </div>
-                </div>
-            </div>
-            </div> -->
-            
-            <!-- sidebar-menu  -->
-            <div class="sidebar-menu">
-            <ul>
 
-                <!-- header-menu: Menu -->
-                <li class="header-menu">
-                  <span>Menu</span>
-                </li>
-                <li>
-                  <!-- <a href="#">
-                      <i class="fa fa-book"></i>
-                      <span>
-                      Home...
+        <nav id="sidebar" class="sidebar-wrapper" style="z-index: 10000;">
+          <div class="sidebar-content">
+              <div class="sidebar-brand">
+              <a href="#"> MS3 - Executive </a>
+              <div id="close-sidebar">
+                  <i class="fas fa-times"></i>
+              </div>
+              </div>
+              
+              <!-- sidebar-header  -->
+              <!-- <div class="sidebar-header">
+                <div class="user-pic">
+                  <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                    alt="User picture">
+                </div>
+                <div class="user-info">
+                  <span class="user-name">
+                  User: <strong>X</strong>
+                  </span>
+                  <span class="user-role">Administrator</span>
+                  <span class="user-status">
+                  <i class="fa fa-circle"></i>
+                  <span>Online</span>
+                  </span>
+                </div>
+              </div> -->
+              
+              <!-- sidebar-search  -->
+              <!-- <div class="sidebar-search">
+              <div>
+                  <div class="input-group">
+                  <input type="text" class="form-control search-menu" placeholder="Search...">
+                  <div class="input-group-append">
+                      <span class="input-group-text">
+                      <i class="fa fa-search" aria-hidden="true"></i>
                       </span>
-                      <span class="badge badge-pill badge-primary">Beta</span>
-                  </a> -->
+                  </div>
+                  </div>
+              </div>
+              </div> -->
+              
+              <!-- sidebar-menu  -->
+              <div class="sidebar-menu">
+                <ul>
 
-                  <router-link class="nav-link" to="/home">
-                      <i class="fa fa-book"></i> Home
-                  </router-link>
-                </li>
-                <li>
-                  <!-- <a href="#">
-                      <i class="fa fa-calendar"></i>
-                      <span>
-                      Explore
-                      </span>
-                  </a> -->
+                  <!-- header-menu: Menu -->
+                  <li class="header-menu">
+                    <span>Menu</span>
+                  </li>
+                  <li>
+                    <!-- <a href="#">
+                        <i class="fa fa-book"></i>
+                        <span>
+                        Home...
+                        </span>
+                        <span class="badge badge-pill badge-primary">Beta</span>
+                    </a> -->
 
-                  <router-link class="nav-link" to="/explore">
-                      <i class="fa fa-calendar"></i> Explore
-                  </router-link>
-                </li>
-                <li>
-                  <!-- <a href="#">
-                      <i class="fa fa-folder"></i>
-                      <span>...</span>
-                  </a> -->
-                  <router-link class="nav-link" to="/about">
-                      <i class="fa fa-folder"></i> About
-                  </router-link>
-                </li>
-                <li>
-                  <router-link class="nav-link" to="/login">
-                      <i class="fa fa-power-off"></i> Login
-                  </router-link>
-                </li>
-                <li>
-                  <!-- <a href="#">
-                      <i class="fa fa-folder"></i>
-                      <span>...</span>
-                  </a> -->
-                  <router-link class="nav-link" to="/vue/home">
-                      <i class="fa fa-folder"></i> [ VueHome ]
-                  </router-link>
-                </li>
+                    <router-link class="nav-link" to="/home">
+                        <i class="fa fa-book"></i> Home
+                    </router-link>
+                  </li>
+                  <li>
+                    <!-- <a href="#">
+                        <i class="fa fa-calendar"></i>
+                        <span>
+                        Explore
+                        </span>
+                    </a> -->
 
-                <!-- header-menu: General -->
-                <!--
-                <li class="header-menu">
-                <span>General</span>
-                </li>
-                
-                <!- - sidebar-dropdown - Dashboard - ->
-                <li class="sidebar-dropdown"> <!- - you can add ' class="active" ' to active the icon of dropdown - ->
-                <a href="#">
-                    <i class="fa fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                    <!- - <span class="badge badge-pill badge-warning">New</span> - ->
-                </a>
-                <div class="sidebar-submenu">  <!- - you can add ' style="display:block;" ' to active the dropdown- ->
-                    <ul>
-                    <li>
-                        <a href="#">
-                        Dashboard 1
-                        <!- - <span class="badge badge-pill badge-success">Pro</span> - ->
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">Dashboard 2</a>
-                    </li>
-                    <li>
-                        <a href="#">Dashboard 3</a>
-                    </li>
-                    </ul>
-                </div>
-                </li>
+                    <router-link class="nav-link" to="/explore">
+                        <i class="fa fa-calendar"></i> Explore
+                    </router-link>
+                  </li>
+                  <li>
+                    <!-- <a href="#">
+                        <i class="fa fa-folder"></i>
+                        <span>...</span>
+                    </a> -->
+                    <router-link class="nav-link" to="/about">
+                        <i class="fa fa-folder"></i> About
+                    </router-link>
+                  </li>
+                  <li>
+                    <router-link class="nav-link" to="/login">
+                        <i class="fa fa-power-off"></i> Login
+                    </router-link>
+                  </li>
+                  <li>
+                    <!-- <a href="#">
+                        <i class="fa fa-folder"></i>
+                        <span>...</span>
+                    </a> -->
+                    <router-link class="nav-link" to="/vue/home">
+                        <i class="fa fa-folder"></i> [ VueHome ]
+                    </router-link>
+                  </li>
 
-                <!- - sidebar-dropdown - Maps - ->
-                <li class="sidebar-dropdown">
-                <a href="#">
-                    <i class="fa fa-globe"></i>
-                    <span>Maps</span>
-                </a>
-                <div class="sidebar-submenu">
-                    <ul>
-                    <li>
-                        <a href="#">Google maps</a>
-                    </li>
-                    <li>
-                        <a href="#">Open street map</a>
-                    </li>
-                    </ul>
-                </div>
-                </li>
+                  <!-- header-menu: General -->
+                  <!--
+                  <li class="header-menu">
+                  <span>General</span>
+                  </li>
+                  
+                  <!- - sidebar-dropdown - Dashboard - ->
+                  <li class="sidebar-dropdown"> <!- - you can add ' class="active" ' to active the icon of dropdown - ->
+                  <a href="#">
+                      <i class="fa fa-tachometer-alt"></i>
+                      <span>Dashboard</span>
+                      <!- - <span class="badge badge-pill badge-warning">New</span> - ->
+                  </a>
+                  <div class="sidebar-submenu">  <!- - you can add ' style="display:block;" ' to active the dropdown- ->
+                      <ul>
+                      <li>
+                          <a href="#">
+                          Dashboard 1
+                          <!- - <span class="badge badge-pill badge-success">Pro</span> - ->
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">Dashboard 2</a>
+                      </li>
+                      <li>
+                          <a href="#">Dashboard 3</a>
+                      </li>
+                      </ul>
+                  </div>
+                  </li>
 
-                <!- - sidebar-dropdown - E-commerce - ->
-                <li class="sidebar-dropdown">
-                <a href="#">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span>E-commerce</span>
-                    <!- - <span class="badge badge-pill badge-danger">3</span> - ->
-                </a>
-                <div class="sidebar-submenu">
-                    <ul>
-                    <li>
-                        <a href="#">Products</a>
-                    </li>
-                    <li>
-                        <a href="#">Orders</a>
-                    </li>
-                    <li>
-                        <a href="#">Credit cart</a>
-                    </li>
-                    </ul>
-                </div>
-                </li>
+                  <!- - sidebar-dropdown - Maps - ->
+                  <li class="sidebar-dropdown">
+                  <a href="#">
+                      <i class="fa fa-globe"></i>
+                      <span>Maps</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                      <ul>
+                      <li>
+                          <a href="#">Google maps</a>
+                      </li>
+                      <li>
+                          <a href="#">Open street map</a>
+                      </li>
+                      </ul>
+                  </div>
+                  </li>
 
-                <!- - sidebar-dropdown - Components - ->
-                <li class="sidebar-dropdown">
-                <a href="#">
-                    <i class="far fa-gem"></i>
-                    <span>Components</span>
-                </a>
-                <div class="sidebar-submenu">
-                    <ul>
-                    <li>
-                        <a href="#">General</a>
-                    </li>
-                    <li>
-                        <a href="#">Panels</a>
-                    </li>
-                    <li>
-                        <a href="#">Tables</a>
-                    </li>
-                    <li>
-                        <a href="#">Icons</a>
-                    </li>
-                    <li>
-                        <a href="#">Forms</a>
-                    </li>
-                    </ul>
-                </div>
-                </li>
+                  <!- - sidebar-dropdown - E-commerce - ->
+                  <li class="sidebar-dropdown">
+                  <a href="#">
+                      <i class="fa fa-shopping-cart"></i>
+                      <span>E-commerce</span>
+                      <!- - <span class="badge badge-pill badge-danger">3</span> - ->
+                  </a>
+                  <div class="sidebar-submenu">
+                      <ul>
+                      <li>
+                          <a href="#">Products</a>
+                      </li>
+                      <li>
+                          <a href="#">Orders</a>
+                      </li>
+                      <li>
+                          <a href="#">Credit cart</a>
+                      </li>
+                      </ul>
+                  </div>
+                  </li>
 
-                <!- - sidebar-dropdown - Charts - ->
-                <li class="sidebar-dropdown">
-                <a href="#">
-                    <i class="fa fa-chart-line"></i>
-                    <span>Charts</span>
-                </a>
-                <div class="sidebar-submenu">
-                    <ul>
-                    <li>
-                        <a href="#">Pie chart</a>
-                    </li>
-                    <li>
-                        <a href="#">Line chart</a>
-                    </li>
-                    <li>
-                        <a href="#">Bar chart</a>
-                    </li>
-                    <li>
-                        <a href="#">Histogram</a>
-                    </li>
-                    </ul>
-                </div>
-                </li>
-                -->
+                  <!- - sidebar-dropdown - Components - ->
+                  <li class="sidebar-dropdown">
+                  <a href="#">
+                      <i class="far fa-gem"></i>
+                      <span>Components</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                      <ul>
+                      <li>
+                          <a href="#">General</a>
+                      </li>
+                      <li>
+                          <a href="#">Panels</a>
+                      </li>
+                      <li>
+                          <a href="#">Tables</a>
+                      </li>
+                      <li>
+                          <a href="#">Icons</a>
+                      </li>
+                      <li>
+                          <a href="#">Forms</a>
+                      </li>
+                      </ul>
+                  </div>
+                  </li>
 
-            </ul>
-            </div> <!-- sidebar-menu  -->
-        </div>
+                  <!- - sidebar-dropdown - Charts - ->
+                  <li class="sidebar-dropdown">
+                  <a href="#">
+                      <i class="fa fa-chart-line"></i>
+                      <span>Charts</span>
+                  </a>
+                  <div class="sidebar-submenu">
+                      <ul>
+                      <li>
+                          <a href="#">Pie chart</a>
+                      </li>
+                      <li>
+                          <a href="#">Line chart</a>
+                      </li>
+                      <li>
+                          <a href="#">Bar chart</a>
+                      </li>
+                      <li>
+                          <a href="#">Histogram</a>
+                      </li>
+                      </ul>
+                  </div>
+                  </li>
+                  -->
 
-        <!-- sidebar-footer  -->
-        <div class="sidebar-footer">
-            <!-- <a href="#">
-            <i class="fa fa-bell"></i>
-            <span class="badge badge-pill badge-warning notification">3</span>
-            </a>
-            <a href="#">
-            <i class="fa fa-envelope"></i>
-            <span class="badge badge-pill badge-success notification">7</span>
-            </a>
-            <a href="#">
-            <i class="fa fa-cog"></i>
-            <span class="badge-sonar"></span>
-            </a> -->
-            <!-- <a href="#">
-            <i class="fa fa-power-off"></i>
-            </a> -->
-        </div>
+              </ul>
+              </div> <!-- sidebar-menu  -->
+          </div>
+
+          <!-- sidebar-footer  -->
+          <div class="sidebar-footer">
+              <!-- <a href="#">
+              <i class="fa fa-bell"></i>
+              <span class="badge badge-pill badge-warning notification">3</span>
+              </a>
+              <a href="#">
+              <i class="fa fa-envelope"></i>
+              <span class="badge badge-pill badge-success notification">7</span>
+              </a>
+              <a href="#">
+              <i class="fa fa-cog"></i>
+              <span class="badge-sonar"></span>
+              </a> -->
+              <!-- <a href="#">
+              <i class="fa fa-power-off"></i>
+              </a> -->
+          </div>
         </nav>
 
         <!-- page-content  -->
@@ -411,12 +412,11 @@ body {
   left: 0px;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .page-wrapper.toggled .page-content {
-    /* padding-left: 300px; */
     padding-left: 260px;
   }
-}
+} */
 /*----------------show sidebar button----------------*/
 #show-sidebar {
   position: fixed;

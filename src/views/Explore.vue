@@ -1,9 +1,6 @@
 <template>
   <div id="explore_main">
 
-    <!-- layer tree -->
-    <!-- <ExploreLayerTree v-if="showExploreLayerTree" v-bind:parentMap="map"/> -->
-
     <!-- barra da carol -->
     
     <!--

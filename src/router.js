@@ -4,11 +4,11 @@ import Router from 'vue-router'
 // / routes
 import Home from './views/Home.vue'
 import Explore from './views/Explore.vue'
+import About from './views/About.vue'
 import Login from './views/Login.vue'
 
 // /vue routes
 import VueHome from './views/Vue/Home.vue'
-import VueAbout from './views/Vue/About.vue'
 
 Vue.use(Router)
 
@@ -35,6 +35,11 @@ export default new Router({
       component: Explore
     },
     {
+      path: '/about',
+      name: 'about',
+      component: About
+    },
+    {
       path: '/login',
       name: 'login',
       component: Login
@@ -45,11 +50,6 @@ export default new Router({
       path: '/vue/home',
       name: 'vue_home',
       component: VueHome
-    },
-    {
-      path: '/vue/about',
-      name: 'vue_about',
-      component: VueAbout
     }
 
   ]

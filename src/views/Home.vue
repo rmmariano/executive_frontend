@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="ms3-page-content">
     <p>Home page...</p>
     <p>[describe the project here...] </p>
   </div>
@@ -16,3 +16,7 @@
 //   }
 // }
 </script>
+
+<style>
+</style>
+

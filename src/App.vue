@@ -21,26 +21,9 @@ export default {
 }
 </script>
 
-<!--
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  /* -webkit-font-smoothing: antialiased; */
-  /* -moz-osx-font-smoothing: grayscale; */
-  text-align: center;
-  /* color: #2c3e50; */
-}
-/* #nav {
-  padding-bottom: 30px;
-} */
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #00eeff;
+/* global styles */
+.ms3-page-content {
+  padding: 40px 40px;
 }
 </style>
--->

@@ -1,10 +1,10 @@
 <template>
-  <div id="left-side-bar">
+  <div id="main-left-side-bar">
 
     <!-- source: (1) https://bootsnipp.com/snippets/Q0dAX ; (2) https://github.com/azouaoui-med/pro-sidebar-template/ -->
     <div class="page-wrapper chiller-theme toggled">
-        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-        <i class="fas fa-bars"></i>
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" style="z-index: 2000;">
+          <i class="fas fa-bars"></i>
         </a>
         <nav id="sidebar" class="sidebar-wrapper">
         <div class="sidebar-content">
@@ -65,7 +65,7 @@
                   </a> -->
 
                   <router-link class="nav-link" to="/home">
-                      <i class="fa fa-book"></i>Home
+                      <i class="fa fa-book"></i> Home
                   </router-link>
                 </li>
                 <li>
@@ -81,6 +81,15 @@
                   </router-link>
                 </li>
                 <li>
+                  <!-- <a href="#">
+                      <i class="fa fa-folder"></i>
+                      <span>...</span>
+                  </a> -->
+                  <router-link class="nav-link" to="/about">
+                      <i class="fa fa-folder"></i> About
+                  </router-link>
+                </li>
+                <li>
                   <router-link class="nav-link" to="/login">
                       <i class="fa fa-power-off"></i> Login
                   </router-link>
@@ -91,16 +100,7 @@
                       <span>...</span>
                   </a> -->
                   <router-link class="nav-link" to="/vue/home">
-                      <i class="fa fa-folder"></i>[ VueHome
-                  </router-link>
-                </li>
-                <li>
-                  <!-- <a href="#">
-                      <i class="fa fa-folder"></i>
-                      <span>...</span>
-                  </a> -->
-                  <router-link class="nav-link" to="/vue/about">
-                      <i class="fa fa-folder"></i>VueAbout ]
+                      <i class="fa fa-folder"></i> [ VueHome ]
                   </router-link>
                 </li>
 
@@ -413,7 +413,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .page-wrapper.toggled .page-content {
-    padding-left: 300px;
+    /* padding-left: 300px; */
+    padding-left: 260px;
   }
 }
 /*----------------show sidebar button----------------*/
@@ -682,12 +683,12 @@ body {
   display: inline-block;
   width: 100%;
   padding-left: 0px;
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
-.page-wrapper .page-content > div {
+/* .page-wrapper .page-content > div {
   padding: 20px 40px;
-}
+} */
 
 .page-wrapper .page-content {
   overflow-x: hidden;

@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="ms3-page-content">
     <p>Login page...</p>
   </div>
 </template>

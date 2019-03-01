@@ -7,13 +7,89 @@
           <b-card-text>
 
             <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitches" checked="">
-              <label class="custom-control-label" for="customSwitches">OpenStreetMap</label>
+              <input type="radio" v-on:change="changeBaseLayerOnMap($event)" name="radio-group-base-layers" 
+                  v-model="selected_radio_value" value="radio-osm" id="radio-osm" class="custom-control-input">
+              <label class="custom-control-label" for="radio-osm">OpenStreetMap</label>
             </div>
             <div class="custom-control custom-switch">
-              <input type="checkbox" class="custom-control-input" id="customSwitches1">
-              <label class="custom-control-label" for="customSwitches1">Google Satellite</label>
+              <input type="radio" v-on:change="changeBaseLayerOnMap($event)" name="radio-group-base-layers" 
+                  v-model="selected_radio_value" value="radio-google-sattelite" id="radio-google-sattelite" class="custom-control-input">
+              <label class="custom-control-label" for="radio-google-sattelite">Google Satellite</label>
             </div>
+
+            <span>Escolhido: {{ selected_radio_value }}</span>
+
+
+            <!-- como estava -->
+            <!-- <div class="custom-control custom-switch">
+              <input type="checkbox" v-on:change="changeBaseLayerOnMap($event)" id="checkbox-osm" class="custom-control-input" checked="">
+              <label class="custom-control-label" for="checkbox-osm">OpenStreetMap</label>
+            </div>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" v-on:change="changeBaseLayerOnMap($event)" id="checkbox-google-sattelite" class="custom-control-input">
+              <label class="custom-control-label" for="checkbox-google-sattelite">Google Satellite</label>
+            </div> -->
+            <!-- <div class="custom-control custom-switch">
+              <input type="checkbox" v-on:change="changeBaseLayerOnMap($event)" id="checkbox-google-sattelite" class="custom-control-input" disabled>
+              <label class="custom-control-label" for="checkbox-google-sattelite">Other map</label>
+            </div> -->
+
+
+
+            <!-- Group of default radios - option 1 -->
+            <!-- <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" name="radio-group-base-layers" id="radio-osm" checked>
+              <label class="custom-control-label" for="radio-osm">OpenStreetMap</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" name="radio-group-base-layers" id="radio-google-satellite">
+              <label class="custom-control-label" for="radio-google-satellite">Google Satellite</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" name="radio-group-base-layers" id="radio-other-map" disabled>
+              <label class="custom-control-label" for="radio-other-map">Other map</label>
+            </div> -->
+
+
+
+            <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="radio-osm" autocomplete="off" checked> OpenStreetMap
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="radio-google-satellite" autocomplete="off"> Google Satellite
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="radio-other-map" autocomplete="off" disabled> Other map
+              </label>
+            </div> -->
+       
+            
+            <!-- <ul>
+              <li>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-secondary active">
+                    <input type="radio" name="options" id="radio-osm" autocomplete="off" checked> OpenStreetMap
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="radio-google-satellite" autocomplete="off"> Google Satellite
+                  </label>                  
+                </div>
+              </li>
+              <li>
+                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-secondary">
+                    <input type="radio" name="options" id="radio-other-map" autocomplete="off" disabled> Other map
+                  </label>
+                </div>
+              </li>
+            </ul> -->
+              
+            
 
             </b-card-text>
           <!-- <b-button href="#" variant="primary">Go somewhere</b-button> -->
@@ -28,29 +104,19 @@
 // import { fromLonLat } from 'ol/proj.js'
 
 export default {
-  props: ['parentMap']
-  // methods: {
-  //   addLayerTreeOnMap: function () {
-  //     var layerTree = new Overlay({
-  //       element: document.getElementById('layer-tree'),
-  //       // stopEvent: false,
-  //       // offset:[0,0],
-  //       // autoPan: true,
-  //       // positioning: 'top-right',
-  //       // autoPanAnimation: {
-  //       //   duration: 250
-  //       // },
-  //       position: fromLonLat([0, 0], 'EPSG:4326', 'EPSG:3857')
-  //     })
-
-  //     this.parentMap.addOverlay(layerTree)
-
-  //     console.log('\n\n this.parentMap: ', this.parentMap, '\n\n')
-  //   }
-  // },
-  // created: function () {
-  //   this.addLayerTreeOnMap()
-  // }
+  props: ['parentMap'],
+  data () {
+    return {
+      selected_radio_value: "radio-osm"
+    }
+  },
+  methods: {
+    changeBaseLayerOnMap: function (event) {
+      console.log(">>> event: ", event);
+      console.log(">>> event.target.value: ", event.target.value);
+      console.log(">>> selected_radio_value: ", this.selected_radio_value)
+    }
+  }
 }
 </script>
 

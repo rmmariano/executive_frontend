@@ -339,7 +339,7 @@
     <explore-left-side-bar/>
 
     <!-- where the map is ploted -->
-    <div id="map" class="map"></div>
+    <div id="map" class="olMap"></div>
 
   </div>
 </template>
@@ -415,7 +415,14 @@ export default {
   /*height: calc(100vh - 60px); / * 100% of the viewport height - navbar height */
   height: 100%;
   width: 100%;
+  margin: 0;
 }
+
+/* html, body, #map {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+} */
 
 /* carol */
 /* 

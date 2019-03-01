@@ -1,7 +1,7 @@
+<!-- original source: (1) https://bootsnipp.com/snippets/Q0dAX ; (2) https://github.com/azouaoui-med/pro-sidebar-template/ -->
 <template>
   <div id="main-left-side-bar">
 
-    <!-- source: (1) https://bootsnipp.com/snippets/Q0dAX ; (2) https://github.com/azouaoui-med/pro-sidebar-template/ -->
     <div class="page-wrapper chiller-theme toggled">
         <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" style="z-index: 10000;">
           <i class="fas fa-bars"></i>
@@ -254,42 +254,8 @@
 
         <!-- page-content  -->
         <main class="page-content">
-
           <!-- insert the related view here -->
           <router-view/>
-
-          <!-- <div class="container-fluid">
-            <h2>Sidebar template</h2>
-            <hr>
-            <div class="row">
-            <div class="form-group col-md-12">
-              <p>This is a responsive sidebar template with dropdown menu based on bootstrap 4 framework.</p>
-              <p> You can find the complete code on <a href="https://github.com/azouaoui-med/pro-sidebar-template" target="_blank">
-                  Github</a>, it contains more themes and background image option</p>
-            </div>
-            <div class="form-group col-md-12">
-              <iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=star&count=true&size=large"
-              frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
-              <iframe src="https://ghbtns.com/github-btn.html?user=azouaoui-med&repo=pro-sidebar-template&type=fork&count=true&size=large"
-              frameborder="0" scrolling="0" width="140px" height="30px"></iframe>
-            </div>
-            </div>
-            <h5>More templates</h5>
-            <hr>
-
-            <div class="row">
-            <div class="col-md-12">
-              <h6>Angular 2+ Version</h6>
-              <div style="width:13rem;">
-              <a href="https://github.com/azouaoui-med/angular-pro-sidebar" target="_blank" class="alert-link">
-                <img class="card-img-top" src="https://user-images.githubusercontent.com/25878302/50010090-d193f480-ffb8-11e8-98ef-3d7ffa6ddfe1.png"
-                  alt="Card image cap">
-              </a>
-              </div>
-            </div>
-            </div>
-          </div> -->
-
         </main> <!-- page-content -->
     </div> <!-- page-wrapper chiller-theme toggled -->
 

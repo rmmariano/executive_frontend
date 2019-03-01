@@ -1,5 +1,5 @@
 <template>
-<!-- layer tree -->
+    <!-- layer tree -->
     <div id="layer-tree">
       <b-card-group id="layer-menu" deck>
         <b-card title="Layers:" header-tag="header" footer-tag="footer">
@@ -18,7 +18,6 @@
             </div>
 
             <!-- <span>Escolhido: {{ selected_radio_value }}</span> -->
-            <span> {{ olmap }} </span>
 
             <!-- como estava -->
             <!-- <div class="custom-control custom-switch">
@@ -98,7 +97,17 @@ export default {
   props: ['olmap'],
   data () {
     return {
-      selected_radio_value: "radio-osm"
+      selected_radio_value: "radio-osm",
+      layers: [
+          {
+              status: true,
+              title: "osm"
+          },
+          {
+              status: false,
+              title: "google-sattelite"
+          }
+      ]
     }
   },
   methods: {
@@ -106,8 +115,21 @@ export default {
       // console.log(">>> event: ", event);
       // console.log(">>> event.target.value: ", event.target.value);
       console.log(">>> selected_radio_value: ", this.selected_radio_value)
-      // console.log(">>> this.$root.olmap: ", this.$root.olmap)
       console.log(">>> olmap: ", this.olmap)
+    },
+    modifyLayer(selectedLayer) {
+      if(selectedLayer.status == true) 
+        for(var i in this.layers){
+          if(this.layers[i].title != selectedLayer.title ) 
+            this.layers[i].status = false
+        }
+
+      this.group.getLayers().forEach(sublayer => {
+        if (sublayer.get('title') === selectedLayer.title) 
+          sublayer.setVisible(selectedLayer.status)
+        else
+          sublayer.setVisible(false)
+      })
     }
   }
 }

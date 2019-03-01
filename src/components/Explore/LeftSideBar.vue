@@ -44,21 +44,16 @@
           <div id="button02" class="collapse width">
             <div style="width:400px;">
               <p>2</p>
-              <p>Works smoother when element has defined width. Egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </div>
           </div>
           <div id="button03" class="collapse width">
             <div style="width:400px;">
               <p>3</p>
-              <p>Works smoother when element has defined width. Egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </div>
           </div>
           <div id="button04" class="collapse width">
             <div style="width:400px;">
               <p>4</p>
-              <p>Works smoother when element has defined width. Egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </div>
           </div>        
@@ -100,7 +95,6 @@ import LeftSideBarLayerTree from '@/components/Explore/LeftSideBarLayerTree.vue'
 
 export default {
   name: 'LeftSideBar',
-
   data () {
     return {
     }

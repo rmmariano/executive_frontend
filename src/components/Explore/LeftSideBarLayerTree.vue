@@ -17,8 +17,7 @@
               <label class="custom-control-label" for="radio-google-sattelite">Google Satellite</label>
             </div>
 
-            <span>Escolhido: {{ selected_radio_value }}</span>
-
+            <!-- <span>Escolhido: {{ selected_radio_value }}</span> -->
 
             <!-- como estava -->
             <!-- <div class="custom-control custom-switch">
@@ -104,7 +103,7 @@
 // import { fromLonLat } from 'ol/proj.js'
 
 export default {
-  props: ['parentMap'],
+  name: 'LeftSideBarLayerTree',
   data () {
     return {
       selected_radio_value: "radio-osm"
@@ -112,9 +111,10 @@ export default {
   },
   methods: {
     changeBaseLayerOnMap: function (event) {
-      console.log(">>> event: ", event);
-      console.log(">>> event.target.value: ", event.target.value);
+      // console.log(">>> event: ", event);
+      // console.log(">>> event.target.value: ", event.target.value);
       console.log(">>> selected_radio_value: ", this.selected_radio_value)
+      console.log(">>> this.$root.olmap: ", this.$root.olmap)
     }
   }
 }

@@ -363,14 +363,12 @@ export default {
 
   data () {
     return {
-      map: {},
-      showExploreLayerTree: false
     }
   },
   methods: {
     initMap: function () {
       // eslint-disable-next-line
-      this.map = new Map({
+      this.$root.olmap = new Map({
         target: 'map',
         layers: [
           layerGroupBaseMap

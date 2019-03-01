@@ -38,7 +38,7 @@
         <div class="col-md-6">
           <div id="button-left-side-bar-layer-tree" class="collapse width"> <!-- you can put ' class="show" ' to show the box automatically-->
             <div style="width:400px;">
-              <left-side-bar-layer-tree/>
+              <left-side-bar-layer-tree v-bind:olmap="olmap"/>
             </div>
           </div>
           <div id="button02" class="collapse width">
@@ -95,6 +95,7 @@ import LeftSideBarLayerTree from '@/components/Explore/LeftSideBarLayerTree.vue'
 
 export default {
   name: 'LeftSideBar',
+  props: ['olmap'],
   data () {
     return {
     }

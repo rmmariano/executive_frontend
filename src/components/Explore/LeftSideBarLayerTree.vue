@@ -18,6 +18,7 @@
             </div>
 
             <!-- <span>Escolhido: {{ selected_radio_value }}</span> -->
+            <span> {{ olmap }} </span>
 
             <!-- como estava -->
             <!-- <div class="custom-control custom-switch">
@@ -33,8 +34,6 @@
               <label class="custom-control-label" for="checkbox-google-sattelite">Other map</label>
             </div> -->
 
-
-
             <!-- Group of default radios - option 1 -->
             <!-- <div class="custom-control custom-radio">
               <input type="radio" class="custom-control-input" name="radio-group-base-layers" id="radio-osm" checked>
@@ -49,8 +48,6 @@
               <label class="custom-control-label" for="radio-other-map">Other map</label>
             </div> -->
 
-
-
             <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary active">
                 <input type="radio" name="options" id="radio-osm" autocomplete="off" checked> OpenStreetMap
@@ -62,7 +59,6 @@
                 <input type="radio" name="options" id="radio-other-map" autocomplete="off" disabled> Other map
               </label>
             </div> -->
-       
             
             <!-- <ul>
               <li>
@@ -87,8 +83,6 @@
                 </div>
               </li>
             </ul> -->
-              
-            
 
             </b-card-text>
           <!-- <b-button href="#" variant="primary">Go somewhere</b-button> -->
@@ -99,11 +93,9 @@
 </template>
 
 <script>
-// import Overlay from 'ol/Overlay.js'
-// import { fromLonLat } from 'ol/proj.js'
-
 export default {
   name: 'LeftSideBarLayerTree',
+  props: ['olmap'],
   data () {
     return {
       selected_radio_value: "radio-osm"
@@ -114,7 +106,8 @@ export default {
       // console.log(">>> event: ", event);
       // console.log(">>> event.target.value: ", event.target.value);
       console.log(">>> selected_radio_value: ", this.selected_radio_value)
-      console.log(">>> this.$root.olmap: ", this.$root.olmap)
+      // console.log(">>> this.$root.olmap: ", this.$root.olmap)
+      console.log(">>> olmap: ", this.olmap)
     }
   }
 }

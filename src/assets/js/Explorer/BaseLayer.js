@@ -36,19 +36,19 @@ import XYZ from 'ol/source/XYZ'
      SINGLE LAYERS
 */
 const layerBaseOSM = new TileLayer({
+  id: 'osm',
+  name: 'OpenStreetMap',
   source: new XYZ({
     url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-  }),
-  id: 'osm',
-  name: 'OpenStreetMap'
+  })
 })
 
 const layerBaseGoogleSatellite = new TileLayer({
+  id: 'google-sattelite',
+  name: 'Google Satellite',
   source: new XYZ({
     url: 'http://mt1.google.com/vt/lyrs=s&hl=pl&&x={x}&y={y}&z={z}'
-  }),
-  id: 'google-sattelite',
-  name: 'Google Satellite'
+  })
 })
 
 /*

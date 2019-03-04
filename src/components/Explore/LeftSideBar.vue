@@ -56,11 +56,11 @@
               <p>4</p>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </div>
-          </div>        
+          </div>
         </div>
 
         <!-- vertical collapse -->
-        <!-- 
+        <!--
         <div class="col-md-6">
             <button role="button" class="btn btn-danger" data-toggle="collapse" data-target="#demo">
                 horizontal collapse

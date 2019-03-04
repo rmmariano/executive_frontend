@@ -32,25 +32,33 @@ import XYZ from 'ol/source/XYZ'
 //     source: new ol.source.TileImage({ url: 'http://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}' }),
 // })
 
+/*
+     SINGLE LAYERS
+*/
 const layerBaseOSM = new TileLayer({
   source: new XYZ({
     url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-  })
+  }),
+  id: 'osm',
+  name: 'OpenStreetMap'
 })
 
 const layerBaseGoogleSatellite = new TileLayer({
   source: new XYZ({
     url: 'http://mt1.google.com/vt/lyrs=s&hl=pl&&x={x}&y={y}&z={z}'
-  })
+  }),
+  id: 'google-sattelite',
+  name: 'Google Satellite'
 })
 
+/*
+     GROUP LAYERS
+*/
 const layerGroupBaseMap = new Group({
   title: 'layerGroupBaseMap',
   layers: [layerBaseGoogleSatellite, layerBaseOSM]
 })
 
 export {
-  layerBaseOSM,
-  layerBaseGoogleSatellite,
   layerGroupBaseMap
 }

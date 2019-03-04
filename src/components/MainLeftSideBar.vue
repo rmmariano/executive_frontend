@@ -1,227 +1,227 @@
 <!-- original source: (1) https://bootsnipp.com/snippets/Q0dAX ; (2) https://github.com/azouaoui-med/pro-sidebar-template/ -->
 <template>
-  <div id="main-left-side-bar">
+  <div id='main-left-side-bar'>
 
-    <div class="page-wrapper chiller-theme toggled">
-        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" style="z-index: 10000;">
-          <i class="fas fa-bars"></i>
+    <div class='page-wrapper chiller-theme toggled'>
+        <a id='show-sidebar' class='btn btn-sm btn-dark' href='#' style='z-index: 10000;'>
+          <i class='fas fa-bars'></i>
         </a>
 
-        <nav id="sidebar" class="sidebar-wrapper" style="z-index: 10000;">
-          <div class="sidebar-content">
-              <div class="sidebar-brand">
-              <a href="#"> MS3 - Executive </a>
-              <div id="close-sidebar">
-                  <i class="fas fa-times"></i>
+        <nav id='sidebar' class='sidebar-wrapper' style='z-index: 10000;'>
+          <div class='sidebar-content'>
+              <div class='sidebar-brand'>
+              <a href='#'> MS3 - Executive </a>
+              <div id='close-sidebar'>
+                  <i class='fas fa-times'></i>
               </div>
               </div>
-              
+
               <!-- sidebar-header  -->
-              <!-- <div class="sidebar-header">
-                <div class="user-pic">
-                  <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-                    alt="User picture">
+              <!-- <div class='sidebar-header'>
+                <div class='user-pic'>
+                  <img class='img-responsive img-rounded' src='https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg'
+                    alt='User picture'>
                 </div>
-                <div class="user-info">
-                  <span class="user-name">
+                <div class='user-info'>
+                  <span class='user-name'>
                   User: <strong>X</strong>
                   </span>
-                  <span class="user-role">Administrator</span>
-                  <span class="user-status">
-                  <i class="fa fa-circle"></i>
+                  <span class='user-role'>Administrator</span>
+                  <span class='user-status'>
+                  <i class='fa fa-circle'></i>
                   <span>Online</span>
                   </span>
                 </div>
               </div> -->
-              
+
               <!-- sidebar-search  -->
-              <!-- <div class="sidebar-search">
+              <!-- <div class='sidebar-search'>
               <div>
-                  <div class="input-group">
-                  <input type="text" class="form-control search-menu" placeholder="Search...">
-                  <div class="input-group-append">
-                      <span class="input-group-text">
-                      <i class="fa fa-search" aria-hidden="true"></i>
+                  <div class='input-group'>
+                  <input type='text' class='form-control search-menu' placeholder='Search...'>
+                  <div class='input-group-append'>
+                      <span class='input-group-text'>
+                      <i class='fa fa-search' aria-hidden='true'></i>
                       </span>
                   </div>
                   </div>
               </div>
               </div> -->
-              
+
               <!-- sidebar-menu  -->
-              <div class="sidebar-menu">
+              <div class='sidebar-menu'>
                 <ul>
 
                   <!-- header-menu: Menu -->
-                  <li class="header-menu">
+                  <li class='header-menu'>
                     <span>Menu</span>
                   </li>
                   <li>
-                    <!-- <a href="#">
-                        <i class="fa fa-book"></i>
+                    <!-- <a href='#'>
+                        <i class='fa fa-book'></i>
                         <span>
                         Home...
                         </span>
-                        <span class="badge badge-pill badge-primary">Beta</span>
+                        <span class='badge badge-pill badge-primary'>Beta</span>
                     </a> -->
 
-                    <router-link class="nav-link" to="/home">
-                        <i class="fa fa-book"></i> Home
+                    <router-link class='nav-link' to='/home'>
+                        <i class='fa fa-book'></i> Home
                     </router-link>
                   </li>
                   <li>
-                    <!-- <a href="#">
-                        <i class="fa fa-calendar"></i>
+                    <!-- <a href='#'>
+                        <i class='fa fa-calendar'></i>
                         <span>
                         Explore
                         </span>
                     </a> -->
 
-                    <router-link class="nav-link" to="/explore">
-                        <i class="fa fa-calendar"></i> Explore
+                    <router-link class='nav-link' to='/explore'>
+                        <i class='fa fa-calendar'></i> Explore
                     </router-link>
                   </li>
                   <li>
-                    <!-- <a href="#">
-                        <i class="fa fa-folder"></i>
+                    <!-- <a href='#'>
+                        <i class='fa fa-folder'></i>
                         <span>...</span>
                     </a> -->
-                    <router-link class="nav-link" to="/about">
-                        <i class="fa fa-folder"></i> About
+                    <router-link class='nav-link' to='/about'>
+                        <i class='fa fa-folder'></i> About
                     </router-link>
                   </li>
                   <li>
-                    <router-link class="nav-link" to="/login">
-                        <i class="fa fa-power-off"></i> Login
+                    <router-link class='nav-link' to='/login'>
+                        <i class='fa fa-power-off'></i> Login
                     </router-link>
                   </li>
                   <li>
-                    <!-- <a href="#">
-                        <i class="fa fa-folder"></i>
+                    <!-- <a href='#'>
+                        <i class='fa fa-folder'></i>
                         <span>...</span>
                     </a> -->
-                    <router-link class="nav-link" to="/vue/home">
-                        <i class="fa fa-folder"></i> [ VueHome ]
+                    <router-link class='nav-link' to='/vue/home'>
+                        <i class='fa fa-folder'></i> [ VueHome ]
                     </router-link>
                   </li>
 
                   <!-- header-menu: General -->
                   <!--
-                  <li class="header-menu">
+                  <li class='header-menu'>
                   <span>General</span>
                   </li>
-                  
+
                   <!- - sidebar-dropdown - Dashboard - ->
-                  <li class="sidebar-dropdown"> <!- - you can add ' class="active" ' to active the icon of dropdown - ->
-                  <a href="#">
-                      <i class="fa fa-tachometer-alt"></i>
+                  <li class='sidebar-dropdown'> <!- - you can add ' class='active' ' to active the icon of dropdown - ->
+                  <a href='#'>
+                      <i class='fa fa-tachometer-alt'></i>
                       <span>Dashboard</span>
-                      <!- - <span class="badge badge-pill badge-warning">New</span> - ->
+                      <!- - <span class='badge badge-pill badge-warning'>New</span> - ->
                   </a>
-                  <div class="sidebar-submenu">  <!- - you can add ' style="display:block;" ' to active the dropdown- ->
+                  <div class='sidebar-submenu'>  <!- - you can add ' style='display:block;' ' to active the dropdown- ->
                       <ul>
                       <li>
-                          <a href="#">
+                          <a href='#'>
                           Dashboard 1
-                          <!- - <span class="badge badge-pill badge-success">Pro</span> - ->
+                          <!- - <span class='badge badge-pill badge-success'>Pro</span> - ->
                           </a>
                       </li>
                       <li>
-                          <a href="#">Dashboard 2</a>
+                          <a href='#'>Dashboard 2</a>
                       </li>
                       <li>
-                          <a href="#">Dashboard 3</a>
+                          <a href='#'>Dashboard 3</a>
                       </li>
                       </ul>
                   </div>
                   </li>
 
                   <!- - sidebar-dropdown - Maps - ->
-                  <li class="sidebar-dropdown">
-                  <a href="#">
-                      <i class="fa fa-globe"></i>
+                  <li class='sidebar-dropdown'>
+                  <a href='#'>
+                      <i class='fa fa-globe'></i>
                       <span>Maps</span>
                   </a>
-                  <div class="sidebar-submenu">
+                  <div class='sidebar-submenu'>
                       <ul>
                       <li>
-                          <a href="#">Google maps</a>
+                          <a href='#'>Google maps</a>
                       </li>
                       <li>
-                          <a href="#">Open street map</a>
+                          <a href='#'>Open street map</a>
                       </li>
                       </ul>
                   </div>
                   </li>
 
                   <!- - sidebar-dropdown - E-commerce - ->
-                  <li class="sidebar-dropdown">
-                  <a href="#">
-                      <i class="fa fa-shopping-cart"></i>
+                  <li class='sidebar-dropdown'>
+                  <a href='#'>
+                      <i class='fa fa-shopping-cart'></i>
                       <span>E-commerce</span>
-                      <!- - <span class="badge badge-pill badge-danger">3</span> - ->
+                      <!- - <span class='badge badge-pill badge-danger'>3</span> - ->
                   </a>
-                  <div class="sidebar-submenu">
+                  <div class='sidebar-submenu'>
                       <ul>
                       <li>
-                          <a href="#">Products</a>
+                          <a href='#'>Products</a>
                       </li>
                       <li>
-                          <a href="#">Orders</a>
+                          <a href='#'>Orders</a>
                       </li>
                       <li>
-                          <a href="#">Credit cart</a>
+                          <a href='#'>Credit cart</a>
                       </li>
                       </ul>
                   </div>
                   </li>
 
                   <!- - sidebar-dropdown - Components - ->
-                  <li class="sidebar-dropdown">
-                  <a href="#">
-                      <i class="far fa-gem"></i>
+                  <li class='sidebar-dropdown'>
+                  <a href='#'>
+                      <i class='far fa-gem'></i>
                       <span>Components</span>
                   </a>
-                  <div class="sidebar-submenu">
+                  <div class='sidebar-submenu'>
                       <ul>
                       <li>
-                          <a href="#">General</a>
+                          <a href='#'>General</a>
                       </li>
                       <li>
-                          <a href="#">Panels</a>
+                          <a href='#'>Panels</a>
                       </li>
                       <li>
-                          <a href="#">Tables</a>
+                          <a href='#'>Tables</a>
                       </li>
                       <li>
-                          <a href="#">Icons</a>
+                          <a href='#'>Icons</a>
                       </li>
                       <li>
-                          <a href="#">Forms</a>
+                          <a href='#'>Forms</a>
                       </li>
                       </ul>
                   </div>
                   </li>
 
                   <!- - sidebar-dropdown - Charts - ->
-                  <li class="sidebar-dropdown">
-                  <a href="#">
-                      <i class="fa fa-chart-line"></i>
+                  <li class='sidebar-dropdown'>
+                  <a href='#'>
+                      <i class='fa fa-chart-line'></i>
                       <span>Charts</span>
                   </a>
-                  <div class="sidebar-submenu">
+                  <div class='sidebar-submenu'>
                       <ul>
                       <li>
-                          <a href="#">Pie chart</a>
+                          <a href='#'>Pie chart</a>
                       </li>
                       <li>
-                          <a href="#">Line chart</a>
+                          <a href='#'>Line chart</a>
                       </li>
                       <li>
-                          <a href="#">Bar chart</a>
+                          <a href='#'>Bar chart</a>
                       </li>
                       <li>
-                          <a href="#">Histogram</a>
+                          <a href='#'>Histogram</a>
                       </li>
                       </ul>
                   </div>
@@ -233,27 +233,27 @@
           </div>
 
           <!-- sidebar-footer  -->
-          <div class="sidebar-footer">
-              <!-- <a href="#">
-              <i class="fa fa-bell"></i>
-              <span class="badge badge-pill badge-warning notification">3</span>
+          <div class='sidebar-footer'>
+              <!-- <a href='#'>
+              <i class='fa fa-bell'></i>
+              <span class='badge badge-pill badge-warning notification'>3</span>
               </a>
-              <a href="#">
-              <i class="fa fa-envelope"></i>
-              <span class="badge badge-pill badge-success notification">7</span>
+              <a href='#'>
+              <i class='fa fa-envelope'></i>
+              <span class='badge badge-pill badge-success notification'>7</span>
               </a>
-              <a href="#">
-              <i class="fa fa-cog"></i>
-              <span class="badge-sonar"></span>
+              <a href='#'>
+              <i class='fa fa-cog'></i>
+              <span class='badge-sonar'></span>
               </a> -->
-              <!-- <a href="#">
-              <i class="fa fa-power-off"></i>
+              <!-- <a href='#'>
+              <i class='fa fa-power-off'></i>
               </a> -->
           </div>
         </nav>
 
         <!-- page-content  -->
-        <main class="page-content">
+        <main class='page-content'>
           <!-- insert the related view here -->
           <router-view/>
         </main> <!-- page-content -->
@@ -266,26 +266,26 @@
 window.jQuery = window.$ = require('jquery')
 
 // TODO: passar esse código abaixo para Vue
+// eslint-disable-next-line
 jQuery(function ($) {
-
-  $(".sidebar-dropdown > a").click(function() {
-    $(".sidebar-submenu").slideUp(200)
-    if ($(this).parent().hasClass("active")) {
-      $(".sidebar-dropdown").removeClass("active")
-      $(this).parent().removeClass("active")
+  $('.sidebar-dropdown > a').click(function () {
+    $('.sidebar-submenu').slideUp(200)
+    if ($(this).parent().hasClass('active')) {
+      $('.sidebar-dropdown').removeClass('active')
+      $(this).parent().removeClass('active')
     } else {
-      $(".sidebar-dropdown").removeClass("active")
-      $(this).next(".sidebar-submenu").slideDown(200)
-      $(this).parent().addClass("active")
+      $('.sidebar-dropdown').removeClass('active')
+      $(this).next('.sidebar-submenu').slideDown(200)
+      $(this).parent().addClass('active')
     }
   })
 
-  $("#close-sidebar").click(function() {
-    $(".page-wrapper").removeClass("toggled")
+  $('#close-sidebar').click(function () {
+    $('.page-wrapper').removeClass('toggled')
   })
 
-  $("#show-sidebar").click(function() {
-    $(".page-wrapper").addClass("toggled")
+  $('#show-sidebar').click(function () {
+    $('.page-wrapper').addClass('toggled')
   })
 })
 
@@ -322,7 +322,7 @@ export default {}
     transform: rotate(0deg);
   }
 }
-  
+
 @keyframes sonar {
   0% {
     transform: scale(0.9);
@@ -333,6 +333,7 @@ export default {}
     opacity: 0;
   }
 }
+
 body {
   font-size: 0.9rem;
 }
@@ -398,7 +399,7 @@ body {
 /*----------------sidebar-wrapper----------------*/
 
 .sidebar-wrapper {
-  width: 260px;
+  width: 200px;
   height: 100%;
   max-height: 100%;
   position: fixed;
@@ -536,9 +537,9 @@ body {
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown > a:after {
-  font-family: "Font Awesome 5 Free";
+  font-family: 'Font Awesome 5 Free';
   font-weight: 900;
-  content: "\f105";
+  content: '\f105';
   font-style: normal;
   display: inline-block;
   font-style: normal;
@@ -563,8 +564,8 @@ body {
 }
 
 .sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li a:before {
-  content: "\f111";
-  font-family: "Font Awesome 5 Free";
+  content: '\f111';
+  font-family: 'Font Awesome 5 Free';
   font-weight: 400;
   font-style: normal;
   display: inline-block;
@@ -631,7 +632,7 @@ body {
 }
 
 .badge-sonar:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -695,7 +696,6 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
-
 
 /*-----------------------------chiller-theme-------------------------------------------------*/
 

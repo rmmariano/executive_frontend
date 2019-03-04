@@ -28,7 +28,7 @@ export default {
 }
 @media screen and (min-width: 768px) {
   .page-wrapper.toggled .ms3-page-content {
-    padding-left: 300px;
+    padding-left: 250px;
   }
 }
 /* html, body, .olmap {

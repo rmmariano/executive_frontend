@@ -6,6 +6,8 @@
           <!-- <h6 slot="header" class="mb-0">My header slot</h6> -->
           <b-card-text>
 
+            <!-- original -->
+            <!--
             <div class="custom-control custom-switch">
               <input type="radio" v-on:change="changeBaseLayerOnMap($event)" name="radio-group-base-layers" 
                   v-model="selected_radio_value" value="radio-osm" id="radio-osm" class="custom-control-input">
@@ -16,8 +18,30 @@
                   v-model="selected_radio_value" value="radio-google-sattelite" id="radio-google-sattelite" class="custom-control-input">
               <label class="custom-control-label" for="radio-google-sattelite">Google Satellite</label>
             </div>
+            -->
 
-            <!-- <span>Escolhido: {{ selected_radio_value }}</span> -->
+            <!-- 
+            <div v-for="layer in layers" class="custom-control custom-switch">
+              <input type="radio" v-on:change="changeBaseLayerOnMap($event)" name="radio-group-base-layers" 
+                  v-model="selected_radio_value" value="radio-{{ layer.id }}" id="radio-{{ layer.id }}" class="custom-control-input">
+              <label class="custom-control-label" for="radio-{{ layer.id }}"> {{ layer.name }} </label>
+            </div>
+            -->
+
+            <div v-for="layer in layers" class="custom-control custom-switch">
+              <input type="radio" 
+                  v-on:change="changeLayerVisibility($event, layer)"
+                  v-model="default_radio_value" 
+                  v-bind:value="layer.id"
+                  v-bind:id="layer.id"
+                  name="radio-group-base-layers" 
+                  class="custom-control-input">
+              <label v-bind:for="layer.id" class="custom-control-label" >
+                {{ layer.name }} 
+              </label>
+            </div>
+
+            <!-- <span>Escolhido: {{ default_radio_value }}</span> -->
 
             <!-- como estava -->
             <!-- <div class="custom-control custom-switch">
@@ -92,45 +116,53 @@
 </template>
 
 <script>
+import { layerGroupBaseMap } from '@/assets/js/Explorer/BaseLayer'
+
 export default {
   name: 'LeftSideBarLayerTree',
   props: ['olmap'],
   data () {
     return {
-      selected_radio_value: "radio-osm",
+      default_radio_value: 'osm',
+      layerGroupBaseMap,
       layers: [
-          {
-              status: true,
-              title: "osm"
-          },
-          {
-              status: false,
-              title: "google-sattelite"
-          }
+        {
+          id: 'osm',
+          name: 'OpenStreetMap'
+        },
+        {
+          id: 'google-sattelite',
+          name: 'Google Satellite'
+        }
       ]
     }
   },
   methods: {
-    changeBaseLayerOnMap: function (event) {
-      // console.log(">>> event: ", event);
-      // console.log(">>> event.target.value: ", event.target.value);
-      console.log(">>> selected_radio_value: ", this.selected_radio_value)
-      console.log(">>> olmap: ", this.olmap)
-    },
-    modifyLayer(selectedLayer) {
-      if(selectedLayer.status == true) 
-        for(var i in this.layers){
-          if(this.layers[i].title != selectedLayer.title ) 
-            this.layers[i].status = false
+    initComponent: function () {
+      // iterate on list of layers to show the default base layer on the map
+      this.layerGroupBaseMap.getLayers().forEach(layer => {
+        // if the layer is equal to the default, so show it on the map, else it does not show
+        if (layer.getProperties().id === this.default_radio_value) {
+          layer.setVisible(true)
+        } else {
+          layer.setVisible(false)
         }
-
-      this.group.getLayers().forEach(sublayer => {
-        if (sublayer.get('title') === selectedLayer.title) 
-          sublayer.setVisible(selectedLayer.status)
-        else
-          sublayer.setVisible(false)
+      })
+    },
+    changeLayerVisibility: function (event, selectedLayer) {
+      // iterate on list of layers to show the default base layer on the map
+      this.layerGroupBaseMap.getLayers().forEach(layer => {
+        // if the selected layer is equal to the current layer, so show it on the map, else it does not show
+        if (selectedLayer.id === layer.getProperties().id) {
+          layer.setVisible(true)
+        } else {
+          layer.setVisible(false)
+        }
       })
     }
+  },
+  mounted: function () {
+    this.initComponent()
   }
 }
 </script>

@@ -19,7 +19,7 @@ import Overlay from 'ol/Overlay.js'
 import { fromLonLat } from 'ol/proj.js'
 
 // @ is an alias to /src
-import { layerGroupBaseMap } from '@/assets/js/Explorer/Layer'
+import { layerGroupBaseMap } from '@/assets/js/Explorer/BaseLayer'
 import ExploreLeftSideBar from '@/components/Explore/LeftSideBar.vue'
 
 export default {
@@ -30,7 +30,7 @@ export default {
     }
   },
   methods: {
-    initMap: function () {
+    initComponent: function () {
       // eslint-disable-next-line
       this.olmap = new Map({
         target: 'map',
@@ -46,7 +46,7 @@ export default {
     }
   },
   mounted: function () {
-    this.initMap()
+    this.initComponent()
   },
   // mounted () {
   //   this.$nextTick(function () {

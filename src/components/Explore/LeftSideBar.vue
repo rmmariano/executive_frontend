@@ -37,22 +37,22 @@
         <!-- content -->
         <div class="col-md-6">
           <div id="button-left-side-bar-layer-tree" class="collapse width"> <!-- you can put ' class="show" ' to show the box automatically-->
-            <div style="width:400px;">
+            <div style="width:200px;">
               <left-side-bar-layer-tree v-bind:olmap="olmap"/>
             </div>
           </div>
           <div id="button02" class="collapse width">
-            <div style="width:400px;">
+            <div style="width:200px;">
               <p>2</p>
             </div>
           </div>
           <div id="button03" class="collapse width">
-            <div style="width:400px;">
+            <div style="width:200px;">
               <p>3</p>
             </div>
           </div>
           <div id="button04" class="collapse width">
-            <div style="width:400px;">
+            <div style="width:200px;">
               <p>4</p>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
             </div>

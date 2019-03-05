@@ -6,10 +6,10 @@
           <!-- <h6 slot="header" class="mb-0">My header slot</h6> -->
           <b-card-text>
 
-            <div v-for="layer in layers" v-bind:key="layer.id" class="custom-control custom-switch">
+            <div v-for="layer in baseLayerList" v-bind:key="layer.id" class="custom-control custom-switch">
               <input type="radio"
                 v-on:change="changeLayerVisibility($event, layer)"
-                v-model="default_radio_value"
+                v-model="selectedRadioButton"
                 v-bind:value="layer.id"
                 v-bind:id="layer.id"
                 name="radio-group-base-layers"
@@ -28,10 +28,12 @@
 </template>
 
 <script>
+import TileLayer from 'ol/layer/Tile'
+import XYZ from 'ol/source/XYZ'
+
 import {
-  layerBaseOSM,
-  layerBaseGoogleSatellite,
-  layerGroupBaseMap
+  baseLayerList,
+  baseLayerGroup
 } from '@/assets/js/Explorer/BaseLayer'
 
 export default {
@@ -39,35 +41,42 @@ export default {
   props: ['olmap'],
   data () {
     return {
-      default_radio_value: 'osm',
-      layerGroupBaseMap,
-      layers: [
-        {
-          id: 'osm',
-          name: 'OpenStreetMap'
-        },
-        {
-          id: 'google-sattelite',
-          name: 'Google Satellite'
-        }
-      ]
+      baseLayerList,
+      baseLayerGroup,
+      selectedRadioButton: ''
     }
   },
   methods: {
     initComponent: function () {
       // if there is some layer inside the list, so remove it
-      if (layerGroupBaseMap.getLayers().getLength() > 0) {
-        layerGroupBaseMap.getLayers().pop()
+      if (this.baseLayerGroup.getLayers().getLength() > 0) {
+        this.baseLayerGroup.getLayers().pop()
       }
 
+      // plot on the map the default layer
+      this.baseLayerList.forEach(layer => {
+        if (layer.is_default) {
+          // select the default radio button
+          this.selectedRadioButton = layer.id
+          // add the layer on the map
+          this.baseLayerGroup.getLayers().push(
+            new TileLayer({
+              source: new XYZ({
+                url: layer.source.url
+              })
+            })
+          )
+        }
+      })
+
       // put on the list the default layer
-      if (this.default_radio_value === 'osm') {
-        layerGroupBaseMap.getLayers().push(layerBaseOSM)
-      } else if (this.default_radio_value === 'google-sattelite') {
-        layerGroupBaseMap.getLayers().push(layerBaseGoogleSatellite)
-      } else {
-        console.log('\nInvalid default layer\n')
-      }
+      // if (this.default_radio_value === 'osm') {
+      //   this.layerGroupBaseMap.getLayers().push(layerBaseOSM)
+      // } else if (this.default_radio_value === 'google-sattelite') {
+      //   this.layerGroupBaseMap.getLayers().push(layerBaseGoogleSatellite)
+      // } else {
+      //   console.log('\nInvalid default layer\n')
+      // }
 
       // iterate on list of layers to show the default base layer on the map
       // this.layerGroupBaseMap.getLayers().forEach(layer => {
@@ -81,18 +90,34 @@ export default {
     },
     changeLayerVisibility: function (event, selectedLayer) {
       // if there is some layer inside the list, so remove it
-      if (layerGroupBaseMap.getLayers().getLength() > 0) {
-        layerGroupBaseMap.getLayers().pop()
+      if (this.baseLayerGroup.getLayers().getLength() > 0) {
+        this.baseLayerGroup.getLayers().pop()
       }
 
+      // plot on the map the selected layer
+      this.baseLayerList.forEach(layer => {
+        if (selectedLayer.id === layer.id) {
+          // select the radio button (PS: Vue does this automatically)
+          // this.selectedRadioButton = layer.id
+          // add the layer on the map
+          this.baseLayerGroup.getLayers().push(
+            new TileLayer({
+              source: new XYZ({
+                url: layer.source.url
+              })
+            })
+          )
+        }
+      })
+
       // put on the list the selected layer
-      if (selectedLayer.id === 'osm') {
-        layerGroupBaseMap.getLayers().push(layerBaseOSM)
-      } else if (selectedLayer.id === 'google-sattelite') {
-        layerGroupBaseMap.getLayers().push(layerBaseGoogleSatellite)
-      } else {
-        console.log('\nInvalid selected layer\n')
-      }
+      // if (selectedLayer.id === 'osm') {
+      //   this.layerGroupBaseMap.getLayers().push(layerBaseOSM)
+      // } else if (selectedLayer.id === 'google-sattelite') {
+      //   this.layerGroupBaseMap.getLayers().push(layerBaseGoogleSatellite)
+      // } else {
+      //   console.log('\nInvalid selected layer\n')
+      // }
 
       // iterate on list of layers to show the default base layer on the map
       // this.layerGroupBaseMap.getLayers().forEach(layer => {

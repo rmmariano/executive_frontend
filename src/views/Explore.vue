@@ -15,7 +15,7 @@ import Map from 'ol/Map'
 import View from 'ol/View'
 
 // @ is an alias to /src
-import { layerGroupBaseMap } from '@/assets/js/Explorer/BaseLayer'
+import { baseLayerGroup } from '@/assets/js/Explorer/BaseLayer'
 import ExploreLeftSideBar from '@/components/Explore/LeftSideBar.vue'
 
 export default {
@@ -31,7 +31,7 @@ export default {
       this.olmap = new Map({
         target: 'map',
         layers: [
-          layerGroupBaseMap
+          baseLayerGroup
         ],
         view: new View({
           projection: 'EPSG:4326',

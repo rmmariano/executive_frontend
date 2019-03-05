@@ -1,6 +1,4 @@
 import Group from 'ol/layer/Group'
-import TileLayer from 'ol/layer/Tile'
-import XYZ from 'ol/source/XYZ'
 
 // var googleLayerRoadNames=new ol.layer.Tile({
 //     title: "Google Road Names",
@@ -35,32 +33,34 @@ import XYZ from 'ol/source/XYZ'
 /*
      SINGLE LAYERS
 */
-const layerBaseOSM = new TileLayer({
-  id: 'osm',
-  name: 'OpenStreetMap',
-  source: new XYZ({
-    url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-  })
-})
-
-const layerBaseGoogleSatellite = new TileLayer({
-  id: 'google-sattelite',
-  name: 'Google Satellite',
-  source: new XYZ({
-    url: 'http://mt1.google.com/vt/lyrs=s&hl=pl&&x={x}&y={y}&z={z}'
-  })
-})
+const baseLayerList = [
+  {
+    id: 'osm',
+    name: 'OpenStreetMap',
+    source: {
+      url: 'https://{a-c}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+    },
+    is_default: true
+  },
+  {
+    id: 'google-sattelite',
+    name: 'Google Satellite',
+    source: {
+      url: 'http://mt1.google.com/vt/lyrs=s&hl=pl&&x={x}&y={y}&z={z}'
+    },
+    is_default: false
+  }
+]
 
 /*
      GROUP LAYERS
 */
-const layerGroupBaseMap = new Group({
+const baseLayerGroup = new Group({
   title: 'layerGroupBaseMap',
   layers: []
 })
 
 export {
-  layerBaseOSM,
-  layerBaseGoogleSatellite,
-  layerGroupBaseMap
+  baseLayerList,
+  baseLayerGroup
 }

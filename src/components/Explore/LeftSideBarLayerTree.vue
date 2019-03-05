@@ -54,7 +54,9 @@ export default {
       }
 
       // plot on the map the default layer
-      this.baseLayerList.forEach(layer => {
+      for (var index in this.baseLayerList) {
+        var layer = this.baseLayerList[index]
+
         if (layer.is_default) {
           // select the default radio button
           this.selectedRadioButton = layer.id
@@ -66,8 +68,10 @@ export default {
               })
             })
           )
+          // go out from the for it is found the default
+          break
         }
-      })
+      }
     },
     changeLayerVisibility: function (event, selectedLayer) {
       // if there is some layer inside the list, so remove it
@@ -76,7 +80,9 @@ export default {
       }
 
       // plot on the map the selected layer
-      this.baseLayerList.forEach(layer => {
+      for (var index in this.baseLayerList) {
+        var layer = this.baseLayerList[index]
+
         if (selectedLayer.id === layer.id) {
           // select the radio button (PS: Vue does this automatically)
           // this.selectedRadioButton = layer.id
@@ -88,8 +94,10 @@ export default {
               })
             })
           )
+          // go out from the for it is found the selected layer
+          break
         }
-      })
+      }
     }
   },
   created: function () {

@@ -31,7 +31,7 @@ import Group from 'ol/layer/Group'
 // })
 
 /*
-     SINGLE LAYERS
+          BASE LAYER LIST
 */
 const baseLayerList = [
   {
@@ -53,7 +53,7 @@ const baseLayerList = [
 ]
 
 /*
-     GROUP LAYERS
+          BASE LAYER GROUP
 */
 const baseLayerGroup = new Group({
   title: 'layerGroupBaseMap',

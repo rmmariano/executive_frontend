@@ -28,7 +28,11 @@
 </template>
 
 <script>
-import { layerGroupBaseMap } from '@/assets/js/Explorer/BaseLayer'
+import {
+  layerBaseOSM,
+  layerBaseGoogleSatellite,
+  layerGroupBaseMap
+} from '@/assets/js/Explorer/BaseLayer'
 
 export default {
   name: 'LeftSideBarLayerTree',
@@ -51,26 +55,54 @@ export default {
   },
   methods: {
     initComponent: function () {
+      // if there is some layer inside the list, so remove it
+      if (layerGroupBaseMap.getLayers().getLength() > 0) {
+        layerGroupBaseMap.getLayers().pop()
+      }
+
+      // put on the list the default layer
+      if (this.default_radio_value === 'osm') {
+        layerGroupBaseMap.getLayers().push(layerBaseOSM)
+      } else if (this.default_radio_value === 'google-sattelite') {
+        layerGroupBaseMap.getLayers().push(layerBaseGoogleSatellite)
+      } else {
+        console.log('\nInvalid default layer\n')
+      }
+
       // iterate on list of layers to show the default base layer on the map
-      this.layerGroupBaseMap.getLayers().forEach(layer => {
-        // if the layer is equal to the default, so show it on the map, else it does not show
-        if (layer.getProperties().id === this.default_radio_value) {
-          layer.setVisible(true)
-        } else {
-          layer.setVisible(false)
-        }
-      })
+      // this.layerGroupBaseMap.getLayers().forEach(layer => {
+      //   // if the layer is equal to the default, so show it on the map, else it does not show
+      //   if (layer.getProperties().id === this.default_radio_value) {
+      //     layer.setVisible(true)
+      //   } else {
+      //     layer.setVisible(false)
+      //   }
+      // })
     },
     changeLayerVisibility: function (event, selectedLayer) {
+      // if there is some layer inside the list, so remove it
+      if (layerGroupBaseMap.getLayers().getLength() > 0) {
+        layerGroupBaseMap.getLayers().pop()
+      }
+
+      // put on the list the selected layer
+      if (selectedLayer.id === 'osm') {
+        layerGroupBaseMap.getLayers().push(layerBaseOSM)
+      } else if (selectedLayer.id === 'google-sattelite') {
+        layerGroupBaseMap.getLayers().push(layerBaseGoogleSatellite)
+      } else {
+        console.log('\nInvalid selected layer\n')
+      }
+
       // iterate on list of layers to show the default base layer on the map
-      this.layerGroupBaseMap.getLayers().forEach(layer => {
-        // if the selected layer is equal to the current layer, so show it on the map, else it does not show
-        if (selectedLayer.id === layer.getProperties().id) {
-          layer.setVisible(true)
-        } else {
-          layer.setVisible(false)
-        }
-      })
+      // this.layerGroupBaseMap.getLayers().forEach(layer => {
+      //   // if the selected layer is equal to the current layer, so show it on the map, else it does not show
+      //   if (selectedLayer.id === layer.getProperties().id) {
+      //     layer.setVisible(true)
+      //   } else {
+      //     layer.setVisible(false)
+      //   }
+      // })
     }
   },
   created: function () {

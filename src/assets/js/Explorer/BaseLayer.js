@@ -56,9 +56,11 @@ const layerBaseGoogleSatellite = new TileLayer({
 */
 const layerGroupBaseMap = new Group({
   title: 'layerGroupBaseMap',
-  layers: [layerBaseGoogleSatellite, layerBaseOSM]
+  layers: []
 })
 
 export {
+  layerBaseOSM,
+  layerBaseGoogleSatellite,
   layerGroupBaseMap
 }

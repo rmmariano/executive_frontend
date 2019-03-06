@@ -68,7 +68,7 @@ export default {
               })
             })
           )
-          // go out from the for it is found the default
+          // go out from the for if it is found the default
           break
         }
       }
@@ -94,7 +94,7 @@ export default {
               })
             })
           )
-          // go out from the for it is found the selected layer
+          // go out from the for if it is found the selected layer
           break
         }
       }

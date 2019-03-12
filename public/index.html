@@ -4,36 +4,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
+
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
 
-    <!-- arquivos da carol -->
-      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
-      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.css"/> -->
-      <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/themes/default/style.min.css"/> -->
-      <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/> -->
-      <!-- <link rel="stylesheet" href="static/css/base.css" /> -->
-      <!-- <link rel="stylesheet" href="//unpkg.com/leaflet@1.0.1/dist/leaflet.css" /> -->
-      
-      <!-- este é comentado mesmo -->
-      <!--[if lte IE 8]><link rel="stylesheet" href="//cdn.leafletjs.com/leaflet-0.7.2/leaflet.ie.css" /><![endif]-->
-      
-      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/css/tempusdominus-bootstrap-4.min.css" /> -->
-      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.13/leaflet.draw.css" /> -->
-      <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.css"> -->
-      <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
-
-      <!-- icons -->
-      <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" > -->
-      <!-- css para fazer a barra ficar bonita -->
-      <!-- <link rel="stylesheet" href="static/css/leaflet-sidebar.css" /> -->
-
-      <!-- <link rel="stylesheet" href="static/css/L.Control.Sidebar.css" /> -->
-    <!-- arquivos da carol / -->
-
-    <meta name="description" content="Responsive sidebar template with sliding effect and dropdown menu based on bootstrap 3">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+    <!-- Source: https://github.com/Turbo87/sidebar-v2 -->
+    <!-- <link rel="stylesheet" href="static/packages/ol3-sidebar/ol3-sidebar.min.css"> -->
 
     <title> MS3 - Executive </title>
   </head>
@@ -43,47 +22,9 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+
+    <!-- Source: https://github.com/Turbo87/sidebar-v2 -->
+    <script src="static/packages/ol3-sidebar/ol3-sidebar.min.js"></script>
+
   </body>
-
-  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-
-  <!-- arquivos da carol -->
-    
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jstree/3.3.5/jstree.min.js"></script> -->
-
-    <!-- <script src="//unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script> -->
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.13/leaflet.draw.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/leaflet-easybutton@2/src/easy-button.js"></script> -->
-    
-    <!-- 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>    
-    <script src="//cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0-alpha14/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="//cdn.rawgit.com/ScanEx/Leaflet.imageTransform/b236ca1c/src/L.ImageTransform.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.12.1/bootstrap-table.js"></script>
-    <script src="//rawgit.com/wenzhixin/bootstrap-table/develop/src/extensions/editable/bootstrap-table-editable.js"></script>
-    <script src="//rawgit.com/vitalets/x-editable/master/dist/bootstrap3-editable/js/bootstrap-editable.js"></script>
-    -->
-
-    <!-- <script src="static/js/jquery-sidebar.js"></script>
-    <script src="static/js/L.Control.Sidebar.js"></script>  -->
-
-    <!-- <script type="text/javascript">
-        var maestro_url = '{{ maestro_url }}'
-        var host_url = '{{ host_url }}'
-        var providers = {{ providers }}
-    </script> -->
-
-    <!-- <script src="static/js/classes.js"></script>
-    <script src="static/js/base.js"></script>
-    <script src="static/js/search.js"></script>
-    <script src="static/js/login.js"></script>
-    <script src="static/js/executive.js"></script>
-    <script src="static/js/activities.js"></script> -->
-
-  <!-- arquivos da carol / -->
-
 </html>

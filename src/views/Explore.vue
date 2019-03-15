@@ -2,6 +2,7 @@
   <div id="explore_main">
 
     <explore-left-side-bar v-bind:olmap="olmap"/>
+    <!-- <explore-left-side-bar2 v-bind:olmap="olmap"/> -->
 
     <!-- where the map is ploted -->
     <div id="map" class="olMap"></div>
@@ -17,6 +18,7 @@ import View from 'ol/View'
 // @ is an alias to /src
 import { baseLayerGroup } from '@/assets/js/Explorer/BaseLayer'
 import ExploreLeftSideBar from '@/components/Explore/LeftSideBar.vue'
+import ExploreLeftSideBar2 from '@/components/Explore/LeftSideBar2.vue'
 
 export default {
   name: 'Explore',
@@ -51,6 +53,7 @@ export default {
   // }
   components: {
     ExploreLeftSideBar
+    // ExploreLeftSideBar2
   }
 }
 </script>
